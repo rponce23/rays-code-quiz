@@ -18,25 +18,37 @@
         </nav>
     </header>
 
-    <!-- Centered one column layout -->
-    <section class="container my-5">
-        <div class="row justify-content-center">
+    
+    <main class="container my-5">
+        <div id="start">
             <div class="col-12 col-sm-8 col-lg-6">
                 <h1 class="fw-bold">Coding Quiz Challenge</h1>
                 <p class="fs-4">
-                Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answer will penalize your score/time by 5 seconds!
-                </p>
+                Try to answer the following code-related questions within the time limit.</p> 
+                <p class="fs-4">Keep in mind that incorrect answer will penalize your score/time by 5 seconds!</p> 
             </div>
             <div class="buttons col-lg-6">
                 <button class="startb btn btn-primary btn-lg col-2">Start</button>
                 <button class="exitb btn btn-secondary btn-lg col-2">Exit</button>
             </div>
+
         </div>
-    </section>
+       
+        <div class="outmessage hide col-12 col-sm-8 col-lg-6">
+            <h1>You exit from the Quiz!</h1>
+        </div>
+
+        <div id="quizstart" class="hide"></div>
+    
+       
 
 
+    </main>
 
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./assets/js/questions.js"></script>
 <script src="./assets/js/script.js"></script>
+
 </body>
 </html>
