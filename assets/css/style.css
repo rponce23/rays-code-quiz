@@ -1,3 +1,8 @@
 .hide{
     display: none;
 }
+
+button[name=ebutton]{
+    color:black;
+    background-color: rgb(93, 93, 202);
+}

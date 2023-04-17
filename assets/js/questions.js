@@ -8,28 +8,28 @@ let questionsMatrix = [
             "a text editor",
             "none of the above"
         ],
-        answer: 0
+        answer: "a program language"
     },
     {
         question: "Pregunra 2?",
         options: [
-            "a program language",
-            "a computer game",
-            "a text editor",
-            "none of the above"
+            "a pr",
+            "a comp",
+            "a tex",
+            "none oe"
         ],
-        answer: 0
+        answer: "a pr"
     },
 
     {
         question: "Pregunta 3?",
         options: [
-            "a program language",
-            "a computer game",
-            "a text editor",
-            "none of the above"
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
         ],
-        answer: 0
+        answer: "none above"
     },
 
 ];

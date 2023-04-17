@@ -4,11 +4,14 @@ var screenStart = document.querySelector("#start");
 var quest = document.querySelector("#quizstart");
 var startBtn = document.querySelector(".startb");
 var exitBtn = document.querySelector(".exitb");
-var outScreen = document.querySelector('.outmessage')
+var outScreen = document.querySelector('.outmessage');
+var qcount = 0;
 
 function startfun() {
     screenStart.classList.add('hide');
     quest.classList.remove('hide');
+    showQuestion();
+    showAnswer();
 };
 
 function exitfun() {
@@ -20,12 +23,33 @@ startBtn.addEventListener("click", startfun);
 exitBtn.addEventListener("click", exitfun);
 
 
+let equestion = questionsMatrix.map((item) => item.question);
+let eanswer = questionsMatrix.map((item) => item.options);
+let correct = questionsMatrix.map((item) => item.answer);
 
-var h1El = document.createElement("h1");
-let pregu = questionsMatrix.map((item) => item.question);
-console.log(pregu[0]); //aqui si se ve la pregunta
-h1El.textContent = pregu[0];
-quest.append(h1El); //pero no lo muestra en pantalla
+function showQuestion(){
+    var h1El = document.createElement("h1");
+    h1El.textContent = equestion[qcount];
+    quest.append(h1El);
+};
+ 
+function showAnswer(){
+    for (var j = 0; j <= eanswer.length; j++) {
+        var choices = document.createElement("button");
+        choices.name = "ebutton";
+        choices.innerHTML = eanswer[qcount][j];
+        quest.append(choices); 
+        choices.onclick = function()
+        {
+            qcount++;
+            showQuestion();
+            showAnswer();
+        }
+    }
+};
+
+
+
 
 
 
