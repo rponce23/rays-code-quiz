@@ -2,6 +2,7 @@
 // Elements declaration
 var screenStart = document.querySelector("#start");
 var quest = document.querySelector("#quizstart");
+var finish = document.querySelector("#quizstop");
 var startBtn = document.querySelector(".startb");
 var exitBtn = document.querySelector(".exitb");
 var outScreen = document.querySelector('.outmessage');
@@ -31,16 +32,16 @@ exitBtn.addEventListener("click", exitfun);
 let equestion = questionsMatrix.map((item) => item.question);
 let eanswer = questionsMatrix.map((item) => item.options);
 let correct = questionsMatrix.map((item) => item.answer);
+var optionsLen = Object.keys(eanswer[qcount]).length;
 
 function showQuestion(){
     var h1El = document.createElement("h1");
     h1El.textContent = equestion[qcount];
     quest.append(h1El);
-    
 };
  
 function showAnswer(){
-    for (var j = 0; j <= eanswer.length; j++) {
+    for (var j = 0; j < optionsLen; j++) {
         var correctAns = correct[qcount];
         var choices = document.createElement("button");
         choices.style.margin = "10px";
@@ -53,18 +54,22 @@ function showAnswer(){
             if(responded == correctAns){
                 console.log("Correct");
                 score += 1;
+                console.log(score);
             }else{
                 console.log("Wrong");
+                countdown -= 5;
             }
-            qcount++;
             quest.innerHTML = '';
-            
             nextQuestion();
         }
     }
 };
 
 function nextQuestion(){
+    if(qcount == 10){
+        endQuiz()
+    }
+    qcount++;
     showQuestion();
     showAnswer();
 };
@@ -76,8 +81,15 @@ function countdown(){
 
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
+            endQuiz();
         }
     }, 1000);
+};
+
+function endQuiz(){
+    console.log('quiz ended');
+    quest.classList.add('hide');
+    finish.classList.remove('hide')
 };
 
 

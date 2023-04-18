@@ -31,5 +31,27 @@ let questionsMatrix = [
         ],
         answer: 0
     },
+    
+    {
+        question: "Pregunta 3?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Pregunta 3?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
 
 ];
