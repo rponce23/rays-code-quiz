@@ -2,7 +2,12 @@
     display: none;
 }
 
-button[name=ebutton]{
+button{
     color:black;
     background-color: rgb(93, 93, 202);
+    padding: 10px;
+}
+
+button:hover{
+    background-color:antiquewhite;
 }

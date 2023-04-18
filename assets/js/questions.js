@@ -8,7 +8,7 @@ let questionsMatrix = [
             "a text editor",
             "none of the above"
         ],
-        answer: "a program language"
+        answer: 0
     },
     {
         question: "Pregunra 2?",
@@ -18,7 +18,7 @@ let questionsMatrix = [
             "a tex",
             "none oe"
         ],
-        answer: "a pr"
+        answer: 0
     },
 
     {
@@ -29,7 +29,7 @@ let questionsMatrix = [
             "a text itor",
             "none above"
         ],
-        answer: "none above"
+        answer: 0
     },
 
 ];
