@@ -33,7 +33,7 @@ let questionsMatrix = [
     },
     
     {
-        question: "Pregunta 3?",
+        question: "Pregunta 4?",
         options: [
             "a pram language",
             "a cer game",
@@ -44,7 +44,62 @@ let questionsMatrix = [
     },
 
     {
-        question: "Pregunta 3?",
+        question: "Pregunta 5?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Pregunta 6?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Pregunta 7?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Pregunta 8?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Pregunta 9?",
+        options: [
+            "a pram language",
+            "a cer game",
+            "a text itor",
+            "none above"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Pregunta 10?",
         options: [
             "a pram language",
             "a cer game",

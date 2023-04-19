@@ -28,6 +28,17 @@ function exitfun() {
 startBtn.addEventListener("click", startfun);
 exitBtn.addEventListener("click", exitfun);
 
+function countdown(){
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        timeEl.textContent = "Time: " + secondsLeft;
+
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+            endQuiz();
+        }
+    }, 1000);
+};
 
 let equestion = questionsMatrix.map((item) => item.question);
 let eanswer = questionsMatrix.map((item) => item.options);
@@ -35,12 +46,19 @@ let correct = questionsMatrix.map((item) => item.answer);
 var optionsLen = Object.keys(eanswer[qcount]).length;
 
 function showQuestion(){
+    if (qcount>=10){
+        return;
+    }
     var h1El = document.createElement("h1");
     h1El.textContent = equestion[qcount];
     quest.append(h1El);
 };
  
 function showAnswer(){
+    if (qcount>=10){
+        return;
+    }
+
     for (var j = 0; j < optionsLen; j++) {
         var correctAns = correct[qcount];
         var choices = document.createElement("button");
@@ -57,7 +75,7 @@ function showAnswer(){
                 console.log(score);
             }else{
                 console.log("Wrong");
-                countdown -= 5;
+                secondsLeft -= 5;
             }
             quest.innerHTML = '';
             nextQuestion();
@@ -66,7 +84,8 @@ function showAnswer(){
 };
 
 function nextQuestion(){
-    if(qcount == 10){
+    if(qcount == 9){
+        secondsLeft = 1;
         endQuiz()
     }
     qcount++;
@@ -74,25 +93,16 @@ function nextQuestion(){
     showAnswer();
 };
 
-function countdown(){
-    var timerInterval = setInterval(function(){
-        secondsLeft--;
-        timeEl.textContent = "Time: " + secondsLeft;
-
-        if(secondsLeft === 0) {
-            clearInterval(timerInterval);
-            endQuiz();
-        }
-    }, 1000);
-};
-
 function endQuiz(){
-    console.log('quiz ended');
+    console.log("your score " + score);
     quest.classList.add('hide');
     finish.classList.remove('hide')
+    var h3El = document.createElement("h3");
+    h3El.textContent = "Your Score " + score;
+    finish.append(h3El);
 };
 
-
+console.log(qcount.length);
 
 
 
