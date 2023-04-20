@@ -11,100 +11,100 @@ let questionsMatrix = [
         answer: 0
     },
     {
-        question: "Pregunra 2?",
+        question: "The condition in an if/else statement is enclosed with _____.",
         options: [
-            "a pr",
-            "a comp",
-            "a tex",
-            "none oe"
+            "quotes",
+            "curly brackets",
+            "parenthesis",
+            "square brackets"
         ],
-        answer: 0
+        answer: 2
     },
 
     {
-        question: "Pregunta 3?",
+        question: "Which of the following is the correct syntax to print in console?",
         options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
+            "console.log",
+            "print",
+            "print console",
             "none above"
         ],
         answer: 0
     },
     
     {
-        question: "Pregunta 4?",
+        question: "Arrays in JavaScript can be used to store _____.",
         options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
+            "numbers and strings",
+            "other arrays",
+            "booleans",
+            "all of the above"
+        ],
+        answer: 3
+    },
+
+    {
+        question: "Which is NOT a JavaScript Data Types?",
+        options: [
+            "Number",
+            "String",
+            "Iterator",
+            "Boolean"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "Is JavaScript the same as Java?",
+        options: [
+            "Yes",
+            "No",
+            "Sometimes",
             "none above"
+        ],
+        answer: 1
+    },
+
+    {
+        question: " How can you create an Array in JavaScript?",
+        options: [
+            "var x = [];",
+            "var x = ();",
+            "var x = {};",
+            "x = array"
         ],
         answer: 0
     },
 
     {
-        question: "Pregunta 5?",
+        question: "Which is NOT the ways to define a variable in JavaScript??",
         options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
-            "none above"
+            "var",
+            "const",
+            "for",
+            "let"
         ],
-        answer: 0
+        answer: 2
     },
 
     {
-        question: "Pregunta 6?",
+        question: "What is innerHTML?",
         options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
-            "none above"
+            "There is no difference",
+            "innerHTML will process an HTML tag if found in a string",
+            "innerHTML will not process an HTML tag if found in a string",
+            "innerHTML include text"
         ],
-        answer: 0
+        answer: 1
     },
 
     {
-        question: "Pregunta 7?",
+        question: "What is innerText?",
         options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
-            "none above"
-        ],
-        answer: 0
-    },
-
-    {
-        question: "Pregunta 8?",
-        options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
-            "none above"
-        ],
-        answer: 0
-    },
-
-    {
-        question: "Pregunta 9?",
-        options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
-            "none above"
-        ],
-        answer: 0
-    },
-
-    {
-        question: "Pregunta 10?",
-        options: [
-            "a pram language",
-            "a cer game",
-            "a text itor",
-            "none above"
+            "innerText will not process an HTML tag if found in a string",
+            "innerText include a text",
+            "innerText will process an HTML tag if found in a string",
+            "none of the above"
         ],
         answer: 0
     },

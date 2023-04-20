@@ -36,12 +36,13 @@ function countdown(){
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timeEl.textContent = "Time: " + secondsLeft;
-
+        // console.log(secondsLeft);
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
-            // endQuiz();
+            endQuiz();
         }
     }, 1000);
+    
 };
 
 let equestion = questionsMatrix.map((item) => item.question);
@@ -59,6 +60,7 @@ function showQuestion(){
 };
  
 function showAnswer(){
+    
     if (qcount>=10){
         return;
     }
@@ -70,16 +72,17 @@ function showAnswer(){
         choices.name = j;
         choices.innerHTML = eanswer[qcount][j];
         quest.append(choices); 
-        choices.onclick = function()
-        {
+        choices.onclick = function(event)
+        {   event.preventDefault();
             var responded = this.name;
             if(responded == correctAns){
                 // console.log("Correct");
                 score += 1;
-                // console.log(score);
+                
             }else{
                 // console.log("Wrong");
                 secondsLeft -= 5;
+                
             }
             quest.innerHTML = '';
             nextQuestion();
@@ -88,13 +91,14 @@ function showAnswer(){
 };
 
 function nextQuestion(){
-    if(qcount == 9 || secondsLeft == 0){
+    if(qcount == 9){
+        endQuiz();
         secondsLeft = 1;
-        endQuiz()
+    }else{
+        qcount++;
+        showQuestion();
+        showAnswer();
     }
-    qcount++;
-    showQuestion();
-    showAnswer();
 };
 
 function endQuiz(){
@@ -122,10 +126,7 @@ submitBtn.onclick = function() {
         initialsText.value = ""
     }
     var val = localStorage.getItem('dataKey');
-    
-    console.log(val);
-    console.log(archive);
-}
+};
 
 
 
