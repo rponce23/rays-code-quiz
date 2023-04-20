@@ -7,6 +7,10 @@ var startBtn = document.querySelector(".startb");
 var exitBtn = document.querySelector(".exitb");
 var outScreen = document.querySelector('.outmessage');
 var timeEl = document.querySelector(".timedown");
+var scoreEl = document.querySelector(".youScore");
+var submitBtn = document.querySelector(".submitb");
+var initialsText = document.querySelector("#initials");
+var archive = [];
 var qcount = 0;
 var secondsLeft = 60;
 var score = 0;
@@ -35,7 +39,7 @@ function countdown(){
 
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
-            endQuiz();
+            // endQuiz();
         }
     }, 1000);
 };
@@ -70,11 +74,11 @@ function showAnswer(){
         {
             var responded = this.name;
             if(responded == correctAns){
-                console.log("Correct");
+                // console.log("Correct");
                 score += 1;
-                console.log(score);
+                // console.log(score);
             }else{
-                console.log("Wrong");
+                // console.log("Wrong");
                 secondsLeft -= 5;
             }
             quest.innerHTML = '';
@@ -84,7 +88,7 @@ function showAnswer(){
 };
 
 function nextQuestion(){
-    if(qcount == 9){
+    if(qcount == 9 || secondsLeft == 0){
         secondsLeft = 1;
         endQuiz()
     }
@@ -94,16 +98,34 @@ function nextQuestion(){
 };
 
 function endQuiz(){
-    console.log("your score " + score);
+    // console.log("your score " + score);
     quest.classList.add('hide');
     finish.classList.remove('hide')
-    var h3El = document.createElement("h3");
-    h3El.textContent = "Your Score " + score;
-    finish.append(h3El);
+    scoreEl.textContent = "Your Score : " + score;
+    scoreEl.style.fontSize = "30px";
+    scoreEl.style.fontWeight = "bold";
 };
 
-console.log(qcount.length);
 
+submitBtn.onclick = function() {
+    var initials = initialsText.value;
+    if (!initials) {
+        alert("please enter initials.");
+    } else {
+        var resultObj = {
+            initials: initials,
+            score: score
+        }
+        archive.push(resultObj);
+        localStorage.setItem('dataKey', JSON.stringify(archive));
+        
+        initialsText.value = ""
+    }
+    var val = localStorage.getItem('dataKey');
+    
+    console.log(val);
+    console.log(archive);
+}
 
 
 

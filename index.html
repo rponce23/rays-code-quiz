@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar bg-dark text-light mb-5 p-3">
             <div class="container">
-                <div class="highscores fw-bold fs-3"><a href="">View High Scores</a></div>
+                <div class="highscores fw-bold fs-3"><a href="./scores.html">View High Scores</a></div>
                 <div class="timedown fw-bold fs-3"></div>
             </div>
         </nav>
@@ -40,7 +40,13 @@
 
         <div id="quizstart" class="hide qaform"></div>
     
-        <div id="quizstop" class="hide">Quiz Ended</div>
+        <div id="quizstop" class="hide">
+            <div class="youScore"></div>
+
+            <input type="text" id="initials" class="initia mt-1">
+            <button class="submitb btn btn-secondary btn-lg">Submit</button>
+
+        </div>
 
 
     </main>
