@@ -34,5 +34,10 @@ N/A
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
-## Links
+
+## GitHub Link
+https://github.com/rponce23/rays-code-quiz
+
+## Site Link
+https://rponce23.github.io/rays-code-quiz/
 
